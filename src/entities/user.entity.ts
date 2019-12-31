@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinTable } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinTable, OneToMany } from "typeorm";
 import { Role } from "./role.entity";
 
 @Entity()
@@ -6,6 +6,8 @@ import { Role } from "./role.entity";
 export class User {
     @PrimaryGeneratedColumn()
     id: number;
+    @PrimaryGeneratedColumn('uuid')
+    user_id: string;
     @Column({length:45})
     name: string;
     @Column({length:20})
@@ -14,13 +16,24 @@ export class User {
     email: string;
     @Column()
     mobile: number;
+    @Column({length: 20})
+    gender: string;
+    @Column('timestamp', {
+        nullable: false,
+        default: () => 'CURRENT_TIMESTAMP',
+        name: 'create_at'
+    })
+    create_at: Date;
+    @Column('timestamp',{
+        nullable: false,
+        default: () => 'CURRENT_TIMESTAMP',
+        name: 'update_at'
+    })
+    update_at: Date;
+
     @Column()
-    gender: number;
-    @Column()
-    create_at: string;
-    @Column()
-    update_at: string;
-    @ManyToOne(type => Role, role => role.users, {cascade: ["insert", "update"]})
-    @JoinTable()
-    role: Role
+    role_ids: string;
+
+    // @OneToMany(type => Role, role => role.role_id, {cascade: ["insert", "update"]})
+    // role: Role
 }

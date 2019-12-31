@@ -16,13 +16,37 @@ const common_1 = require("@nestjs/common");
 const role_entity_1 = require("../entities/role.entity");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
+const api_exception_1 = require("../common/exceptions/api.exception");
+const api_error_code_enmu_1 = require("../common/enums/api-error-code.enmu");
 let RoleService = class RoleService {
     constructor(roleRepository) {
         this.roleRepository = roleRepository;
     }
-    async test(role) {
-        console.log(role, 'a');
+    async find() {
+        return this.roleRepository.find();
+    }
+    async create(role) {
         return this.roleRepository.save(role);
+    }
+    async update(role) {
+        let result = await this.roleRepository.findOne(role.id);
+        if (result) {
+            return this.roleRepository.update({ "id": role.id }, role);
+        }
+        else {
+            return new api_exception_1.ApiException('角色id不存在', api_error_code_enmu_1.ApiErrorCode.ROLE_ID_INVALID, common_1.HttpStatus.BAD_REQUEST);
+        }
+    }
+    async delete(id) {
+        let role = await this.roleRepository.findOne({
+            where: { "id": id }
+        });
+        if (role) {
+            return this.roleRepository.delete(role);
+        }
+        else {
+            return new api_exception_1.ApiException('角色id不存在', api_error_code_enmu_1.ApiErrorCode.ROLE_ID_INVALID, common_1.HttpStatus.BAD_REQUEST);
+        }
     }
 };
 RoleService = __decorate([

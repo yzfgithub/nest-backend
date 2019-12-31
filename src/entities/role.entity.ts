@@ -6,12 +6,12 @@ import { User } from "./user.entity";
 export class Role {
     @PrimaryGeneratedColumn()
     id: number;
-    @Column()
-    role_id: number;
+    @PrimaryGeneratedColumn('uuid')
+    role_id: string;
     @Column({length:45})
     name: string;
     @Column()
     desc: string;
-    @OneToMany(type => User, user => user.role)
-    users: User[]
+    // @OneToMany(type => User, user => user.role)
+    // users: User[]
 }

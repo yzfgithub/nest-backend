@@ -10,13 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const role_entity_1 = require("./role.entity");
 let User = class User {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], User.prototype, "id", void 0);
+__decorate([
+    typeorm_1.PrimaryGeneratedColumn('uuid'),
+    __metadata("design:type", String)
+], User.prototype, "user_id", void 0);
 __decorate([
     typeorm_1.Column({ length: 45 }),
     __metadata("design:type", String)
@@ -34,22 +37,29 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "mobile", void 0);
 __decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", Number)
+    typeorm_1.Column({ length: 20 }),
+    __metadata("design:type", String)
 ], User.prototype, "gender", void 0);
 __decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
+    typeorm_1.Column('timestamp', {
+        nullable: false,
+        default: () => 'CURRENT_TIMESTAMP',
+        name: 'create_at'
+    }),
+    __metadata("design:type", Date)
 ], User.prototype, "create_at", void 0);
 __decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
+    typeorm_1.Column('timestamp', {
+        nullable: false,
+        default: () => 'CURRENT_TIMESTAMP',
+        name: 'update_at'
+    }),
+    __metadata("design:type", Date)
 ], User.prototype, "update_at", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => role_entity_1.Role, role => role.users, { cascade: ["insert", "update"] }),
-    typeorm_1.JoinTable(),
-    __metadata("design:type", role_entity_1.Role)
-], User.prototype, "role", void 0);
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], User.prototype, "role_ids", void 0);
 User = __decorate([
     typeorm_1.Entity()
 ], User);

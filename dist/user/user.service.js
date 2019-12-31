@@ -16,12 +16,39 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const user_entity_1 = require("../entities/user.entity");
 const typeorm_2 = require("typeorm");
+const api_exception_1 = require("../common/exceptions/api.exception");
+const api_error_code_enmu_1 = require("../common/enums/api-error-code.enmu");
 let UserService = class UserService {
     constructor(userRepository) {
         this.userRepository = userRepository;
     }
-    create() {
-        console.log('ss');
+    async find(query) {
+        return this.userRepository.find(query);
+    }
+    async create(user) {
+        return this.userRepository.save(user);
+    }
+    async update(user) {
+        let result = await this.userRepository.findOne(user.user_id);
+        if (result) {
+            return this.userRepository.update({ "user_id": user.user_id }, user);
+        }
+        else {
+            return new api_exception_1.ApiException('用户id不存在', api_error_code_enmu_1.ApiErrorCode.USER_ID_INVALID, common_1.HttpStatus.BAD_REQUEST);
+        }
+    }
+    async bind(param) {
+        let result = await this.userRepository.findOne({ "user_id": param.user_id });
+        if (result) {
+            result.role_ids = param.role_ids;
+            return this.userRepository.save(result);
+        }
+        else {
+            return new api_exception_1.ApiException('用户id不存在', api_error_code_enmu_1.ApiErrorCode.USER_ID_INVALID, common_1.HttpStatus.BAD_REQUEST);
+        }
+    }
+    async remove(user_id) {
+        return this.userRepository.delete({ "user_id": user_id });
     }
 };
 UserService = __decorate([

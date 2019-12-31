@@ -3,5 +3,8 @@ import { Role } from 'src/entities/role.entity';
 export declare class RoleController {
     private readonly roleService;
     constructor(roleService: RoleService);
-    test(body: Role): Promise<any>;
+    find(): Promise<Role[]>;
+    create(body: Role): Promise<any>;
+    update(body: Role): Promise<Role>;
+    delete(param: any): Promise<string>;
 }

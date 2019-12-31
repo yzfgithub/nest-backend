@@ -1,12 +1,12 @@
-import { Role } from "./role.entity";
 export declare class User {
     id: number;
+    user_id: string;
     name: string;
     password: string;
     email: string;
     mobile: number;
-    gender: number;
-    create_at: string;
-    update_at: string;
-    role: Role;
+    gender: string;
+    create_at: Date;
+    update_at: Date;
+    role_ids: string;
 }

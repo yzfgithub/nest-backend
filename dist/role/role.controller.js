@@ -19,17 +19,46 @@ let RoleController = class RoleController {
     constructor(roleService) {
         this.roleService = roleService;
     }
-    test(body) {
-        return this.roleService.test(body);
+    find() {
+        return this.roleService.find();
+    }
+    create(body) {
+        return this.roleService.create(body);
+    }
+    update(body) {
+        return this.roleService.update(body);
+    }
+    delete(param) {
+        return this.roleService.delete(param.id);
     }
 };
+__decorate([
+    common_1.Get(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], RoleController.prototype, "find", null);
 __decorate([
     common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [role_entity_1.Role]),
     __metadata("design:returntype", Promise)
-], RoleController.prototype, "test", null);
+], RoleController.prototype, "create", null);
+__decorate([
+    common_1.Put(),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [role_entity_1.Role]),
+    __metadata("design:returntype", Promise)
+], RoleController.prototype, "update", null);
+__decorate([
+    common_1.Delete(':id'),
+    __param(0, common_1.Param()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], RoleController.prototype, "delete", null);
 RoleController = __decorate([
     common_1.Controller('role'),
     __metadata("design:paramtypes", [role_service_1.RoleService])

@@ -3,5 +3,8 @@ import { Repository } from 'typeorm';
 export declare class RoleService {
     private readonly roleRepository;
     constructor(roleRepository: Repository<Role>);
-    test(role: Role): Promise<Role>;
+    find(): Promise<Role[]>;
+    create(role: Role): Promise<Role>;
+    update(role: Role): Promise<any>;
+    delete(id: any): Promise<any>;
 }
