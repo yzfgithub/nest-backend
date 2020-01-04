@@ -11,7 +11,7 @@ const fs_1 = require("fs");
 let UploadService = class UploadService {
     async upload(files, body) {
         for (const file of files) {
-            const url = 'http://111.229.246.48:3000/images';
+            const url = '/data/image';
             const writeImage = fs_1.createWriteStream(url);
             writeImage.write(file.buffer);
         }

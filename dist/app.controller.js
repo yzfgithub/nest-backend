@@ -16,7 +16,6 @@ let AppController = class AppController {
         this.appService = appService;
     }
     getHello() {
-        console.log('ss');
         return this.appService.getHello();
     }
 };
@@ -27,7 +26,7 @@ __decorate([
     __metadata("design:returntype", String)
 ], AppController.prototype, "getHello", null);
 AppController = __decorate([
-    common_1.Controller('backend'),
+    common_1.Controller(),
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;
