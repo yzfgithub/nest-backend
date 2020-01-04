@@ -16,6 +16,7 @@ let AppController = class AppController {
         this.appService = appService;
     }
     getHello() {
+        console.log('ss');
         return this.appService.getHello();
     }
 };
