@@ -1110,7 +1110,7 @@
         "signature": "653711fba8904aa27fd8911b63cf526e7b334e13a292da4cefdbbe179ac3f3f2"
       },
       "../src/app.controller.ts": {
-        "version": "b0ec38269f084baf292a991361aa261ad840da36802e4471a0a90e4e382e05d4",
+        "version": "4f87edbf32a702bafb8ce0fddebb3875f8347c915119f2f7b9ffa40ee14d3561",
         "signature": "ef022c91ea9e75ab4082f2e881f9c4db7b346be2da706e876b253bebce5e6140"
       },
       "../src/app.module.ts": {
