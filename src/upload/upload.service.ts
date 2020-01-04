@@ -12,7 +12,8 @@ export class UploadService {
     async upload(files, body) {
         // const user = await this.userRepository.findOne({'name': body.username});
         for(const file of files) {
-            const url = join(__dirname,'../../../image'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
+            const url = 'http://111.229.246.48:3000/images';
+            // const url = join(__dirname,'../../../image'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
             const writeImage = createWriteStream(url)
             writeImage.write(file.buffer)
             // this.imageRepository.save({user_id: user.user_id,url: url})
