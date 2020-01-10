@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { createWriteStream } from 'fs';
 import { join } from 'path';
+import multer = require('multer')
 // import { Image } from '../entities/image.entity'
 // import { User } from '../entities/user.entity'
 // import { Repository } from 'typeorm'
@@ -15,8 +16,13 @@ export class UploadService {
             // const url = '/data/image';
             const url = join(__dirname,'../../', 'public/upload'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
             // const url2 = join(process.cwd(), '../', '/public/upload');
-            const writeImage = createWriteStream(url)
-            writeImage.write(file.buffer)
+            // const writeImage = createWriteStream(url)
+            // writeImage.write(file.buffer)
+            multer.diskStorage({
+                destination: join(__dirname,'../../', 'public/upload'),
+                filename: file.originalname,
+            })
+            
             // this.imageRepository.save({user_id: user.user_id,url: url})
         }
         return '上传成功'
