@@ -1182,7 +1182,7 @@
         "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c"
       },
       "../src/upload/upload.service.ts": {
-        "version": "8bea4336e600c0878219fd9d976a43afaa025505cef6bbb4c8bfbd24384a27c9",
+        "version": "5f02de23cfad5dcb66c2c30dc1c5b9bb0b07dda0707624bdad73af20cf398c08",
         "signature": "f4d299ba157536ae454cfc578fd956dc7706b40c210a46ecbb3fad64551e65c1"
       },
       "../src/upload/upload.controller.ts": {
@@ -13365,7 +13365,6 @@
       "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
       "../node_modules/@nestjs/platform-express/multer/index.d.ts",
       "../node_modules/@nestjs/platform-express/index.d.ts",
-      "../src/upload/upload.service.ts",
       "../src/upload/upload.controller.ts",
       "../src/upload/upload.module.ts",
       "../src/app.module.ts",
@@ -13406,6 +13405,7 @@
       "../src/common/enums/api-error-code.enmu.ts",
       "../src/common/exceptions/api.exception.ts",
       "../src/common/filters/http-exception.filter.ts",
+      "../src/main.ts",
       "../node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts",
       "../node_modules/typeorm/schema-builder/table/tablecolumn.d.ts",
       "../node_modules/typeorm/common/objectliteral.d.ts",
@@ -13707,8 +13707,7 @@
       "../node_modules/@types/webpack-sources/index.d.ts",
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
-      "../node_modules/@types/yargs/index.d.ts",
-      "../src/main.ts"
+      "../node_modules/@types/yargs/index.d.ts"
     ]
   },
   "version": "3.7.3"
