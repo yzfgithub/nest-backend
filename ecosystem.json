@@ -1,7 +1,7 @@
 {
     "apps": [{
         "name": "admin",
-        "script": "./main.js",
+        "script": "./dist/main.js",
         "env": {
             "COMMON_VARIABLE": "true"
         },
