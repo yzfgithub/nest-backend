@@ -12,10 +12,12 @@ export class UploadService {
     async upload(files, body) {
         // const user = await this.userRepository.findOne({'name': body.username});
         for(const file of files) {
-            const url = '/data/image';
-            // const url = join(__dirname,'../../../image'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
-            const writeImage = createWriteStream(url)
-            writeImage.write(file.buffer)
+            // const url = '/data/image';
+            const url = join(__dirname,'../../../image'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
+            const url2 = process.cwd();
+            console.log(url,url2);
+            // const writeImage = createWriteStream(url)
+            // writeImage.write(file.buffer)
             // this.imageRepository.save({user_id: user.user_id,url: url})
         }
         return '上传成功'
