@@ -5,7 +5,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "pm2": "npm run build && git add . && commit -m 'save' && git push && pm2 deploy ecosystem.json production --force",
+    "pm2": "npm run build && git add . && commit -m 'save' && git push origin master && pm2 deploy ecosystem.json production --force",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
