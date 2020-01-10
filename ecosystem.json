@@ -1,0 +1,32 @@
+{
+    "apps": [{
+        "name": "admin",
+        "script": "./main.js",
+        "env": {
+            "COMMON_VARIABLE": "true"
+        },
+        "env_development": {
+            "NODE_ENV": "development",
+            "PORT": 8087
+        },
+        "env_production": {
+            "NODE_ENV": "production",
+            "PORT": 8087
+        }
+    }],
+    "deploy":{
+        "production" : {
+            "user" : "root",
+            "host" : "111.229.246.48",
+            "port": "22",
+            "ref"  : "origin/master",
+            "repo" : "git@github.com:yzfgithub/nest-backend.git",
+            "path" : "/data",
+            "post-deploy" : "npm install && npm run build && pm2 startOrRestart ecosystem.json --env production",
+            "ssh_options": "StrictHostKeyChecking=no",
+            "env"  : {
+                "NODE_ENV": "production"
+            }
+        }
+    }
+}
