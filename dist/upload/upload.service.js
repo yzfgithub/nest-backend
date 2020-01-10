@@ -7,14 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const fs_1 = require("fs");
 const path_1 = require("path");
 let UploadService = class UploadService {
     async upload(files, body) {
         for (const file of files) {
             const url = path_1.join(__dirname, '../../', 'public/upload');
-            const writeImage = fs_1.createWriteStream(url);
-            writeImage.write(file.buffer);
         }
         return '上传成功';
     }
