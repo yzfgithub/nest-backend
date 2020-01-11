@@ -2242,7 +2242,7 @@
         "signature": "10423ad689677fb2a235c3d2624a605991c586eb7f78fda315c05d5d60e40737"
       },
       "../src/upload/upload.service.ts": {
-        "version": "2b9aaaf3ec8d5017ed21a8fde894834015959893c6d1052f08afc2c8db2fe095",
+        "version": "5fac318bfcab327735b515217116de0d25cd7c4f5de4aa05b67d09ed027369cb",
         "signature": "aba511a6c814134cc9864bdc0c5e073f0d0114292ecd036793a78720450d8dcc"
       },
       "../src/upload/upload.controller.ts": {
