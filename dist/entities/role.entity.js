@@ -25,7 +25,9 @@ __decorate([
     __metadata("design:type", String)
 ], Role.prototype, "name", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        charset: 'utf8mb4'
+    }),
     __metadata("design:type", String)
 ], Role.prototype, "desc", void 0);
 Role = __decorate([

@@ -2134,7 +2134,7 @@
         "signature": "259354304eb8584fac210596a52ccad9c6bf82b2315a42ccca5548924d759860"
       },
       "../src/entities/role.entity.ts": {
-        "version": "badb31b3d8c7851e135819c729916cfa593fec8e117f486904524291f1e346c6",
+        "version": "8ffd6fbdf4392b8f205bfd8524d5128ceb6ff0712e845a865858afca057260dd",
         "signature": "256420499536cf9fd8d57c3577e5962475e7c8e8d413f6305a813885aaff2911"
       },
       "../src/common/enums/api-error-code.enmu.ts": {
