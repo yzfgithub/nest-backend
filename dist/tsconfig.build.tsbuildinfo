@@ -2146,7 +2146,7 @@
         "signature": "f9d1ca71072d1aa56bd27499c4e5efabc9739d1535a89fce32b9bfcaedd3f1e6"
       },
       "../src/role/role.service.ts": {
-        "version": "dbb1c7c13a60a0faa65bc92a425d468f47ad8532a28d17cfba486826c96a5528",
+        "version": "7c7dc43ab7cf6ce19ff0db6cf9a3584046c8504386222f23a6caee3615aa1f0a",
         "signature": "023d6f36f4cd785cf67a562bd1e584cc48bff851b10f2a0e318d1690d0f6677a"
       },
       "../src/role/role.controller.ts": {
