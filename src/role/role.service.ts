@@ -14,6 +14,7 @@ export class RoleService {
         }
 
         async create(role:Role): Promise<Role> {
+            console.log(role);
             return this.roleRepository.save(role)
         }
         async update(role:Role): Promise<any> {
