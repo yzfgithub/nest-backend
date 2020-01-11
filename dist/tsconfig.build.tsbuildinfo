@@ -2130,7 +2130,7 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "../src/entities/user.entity.ts": {
-        "version": "1877719c4daa0c585872e353cdc8bc2c4b09cd723d1973bc702f60e9b1047f85",
+        "version": "7bc486bfb7626bbfde017113d8f0de2c89f5e943f128d1b48dbc54045870ea5d",
         "signature": "259354304eb8584fac210596a52ccad9c6bf82b2315a42ccca5548924d759860"
       },
       "../src/entities/role.entity.ts": {
@@ -2242,7 +2242,7 @@
         "signature": "10423ad689677fb2a235c3d2624a605991c586eb7f78fda315c05d5d60e40737"
       },
       "../src/upload/upload.service.ts": {
-        "version": "ab22b18698aa4e7af574189d7246c7abb2afb189194cf886b67993941f227098",
+        "version": "1aa080d16975b9add1f8d3521f248a0390594c8ed3ef954368f21ddd5f6ae937",
         "signature": "aba511a6c814134cc9864bdc0c5e073f0d0114292ecd036793a78720450d8dcc"
       },
       "../src/upload/upload.controller.ts": {

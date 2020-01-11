@@ -37,7 +37,7 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "mobile", void 0);
 __decorate([
-    typeorm_1.Column({ length: 20 }),
+    typeorm_1.Column({ length: 30, charset: 'utf8mb4' }),
     __metadata("design:type", String)
 ], User.prototype, "gender", void 0);
 __decorate([
