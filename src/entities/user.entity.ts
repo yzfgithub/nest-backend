@@ -16,7 +16,7 @@ export class User {
     email: string;
     @Column()
     mobile: number;
-    @Column({length: 20})
+    @Column({length: 30, charset:'utf8mb4'})
     gender: string;
     @Column('timestamp', {
         nullable: false,
