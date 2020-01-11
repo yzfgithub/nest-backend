@@ -2242,7 +2242,7 @@
         "signature": "10423ad689677fb2a235c3d2624a605991c586eb7f78fda315c05d5d60e40737"
       },
       "../src/upload/upload.service.ts": {
-        "version": "5fac318bfcab327735b515217116de0d25cd7c4f5de4aa05b67d09ed027369cb",
+        "version": "b72e41d70e0828ac99e9a51bac7de263c656c557eccb6a95891b75eb5309a77f",
         "signature": "aba511a6c814134cc9864bdc0c5e073f0d0114292ecd036793a78720450d8dcc"
       },
       "../src/upload/upload.controller.ts": {
@@ -2518,7 +2518,7 @@
         "signature": "e7cc724316664e9ca6b3c8fecf9dd70d295b12243d70935ed3cde6df17a58506"
       },
       "../src/main.ts": {
-        "version": "61e55950371705d44cc04fd648240f700bd4b5754e68c0c4ced153302f5fd79b",
+        "version": "fb98d22e625ed7a5fd2bbe1861773e04f0dd108e35fa821453fde91543029c28",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
