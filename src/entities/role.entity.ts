@@ -10,7 +10,9 @@ export class Role {
     role_id: string;
     @Column({length:45})
     name: string;
-    @Column()
+    @Column({
+        charset: 'utf8mb4'
+    })
     desc: string;
     // @OneToMany(type => User, user => user.role)
     // users: User[]
