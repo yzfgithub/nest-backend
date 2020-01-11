@@ -14,7 +14,8 @@ export class UploadService {
         for(const file of files) {
             // const url = '/data/image';
             const url = join(__dirname,'../../', 'public/upload'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
-            // const url2 = join(process.cwd(), '../', '/public/upload');
+            const url2 = join(process.cwd(), '../', '/public/upload');
+            console.log(url2);
             const writeImage = createWriteStream(url)
             writeImage.write(file.buffer)
             
