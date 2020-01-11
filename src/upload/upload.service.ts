@@ -13,13 +13,13 @@ export class UploadService {
         const user = await this.userRepository.findOne({'name': body.username});
         for(const file of files) {
             // const url = '/data/image';
-            const url = join(__dirname,'../../', 'public/upload'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
-            const url2 = join(process.cwd(), '../', '/public/upload');
+            // const url = join(__dirname,'../../', 'public/upload'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
+            const url2 = join(process.cwd(), '../../', '/image');
             console.log(url2);
-            const writeImage = createWriteStream(url)
+            const writeImage = createWriteStream(url2)
             writeImage.write(file.buffer)
             
-            this.imageRepository.save({user_id: user.user_id,url: url})
+            this.imageRepository.save({user_id: user.user_id,url: url2})
         }
         return '上传成功'
     }
