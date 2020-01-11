@@ -13,7 +13,7 @@ export class UploadService {
         const user = await this.userRepository.findOne({'name': body.username});
         for(const file of files) {
             // const url = '/data/image';
-            const url = join(__dirname,'../../', 'public/upload'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
+            const url = join(__dirname,'../../../', 'public/upload'); // join(__dirname,'../../', 'public/image',${Date.now()}-${file.originalname});
             // const url2 = join(process.cwd(), '../../', '/image');
             console.log(url);
             const writeImage = createWriteStream(url)
