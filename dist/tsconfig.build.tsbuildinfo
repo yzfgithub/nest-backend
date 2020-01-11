@@ -2242,7 +2242,7 @@
         "signature": "10423ad689677fb2a235c3d2624a605991c586eb7f78fda315c05d5d60e40737"
       },
       "../src/upload/upload.service.ts": {
-        "version": "11325619d40bfdc11f651b59406f41c9734e9f0f4c6140b784ad83524560e5a6",
+        "version": "2b9aaaf3ec8d5017ed21a8fde894834015959893c6d1052f08afc2c8db2fe095",
         "signature": "aba511a6c814134cc9864bdc0c5e073f0d0114292ecd036793a78720450d8dcc"
       },
       "../src/upload/upload.controller.ts": {
@@ -2518,7 +2518,7 @@
         "signature": "e7cc724316664e9ca6b3c8fecf9dd70d295b12243d70935ed3cde6df17a58506"
       },
       "../src/main.ts": {
-        "version": "e257bfc88039da320ce3c1d8fc5d0d38ad5785438297d575760c691f8e85ac30",
+        "version": "61e55950371705d44cc04fd648240f700bd4b5754e68c0c4ced153302f5fd79b",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -7961,6 +7961,8 @@
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/app.module.ts",
         "../src/common/filters/http-exception.filter.ts",
+        "../node_modules/@nestjs/platform-express/index.d.ts",
+        "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
