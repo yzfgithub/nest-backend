@@ -30,7 +30,7 @@ let UploadService = class UploadService {
             const url2 = path_1.join(process.cwd(), '../../', '/image/' + file.originalname);
             const writeImage = fs_1.createWriteStream(url2);
             writeImage.write(file.buffer);
-            this.imageRepository.save({ user_id: user.user_id, url: url2 });
+            this.imageRepository.save({ user_id: user.user_id, url: file.originalname });
         }
         return '上传成功';
     }
