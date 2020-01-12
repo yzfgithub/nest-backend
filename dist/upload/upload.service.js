@@ -13,6 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
+const fs_1 = require("fs");
 const path_1 = require("path");
 const image_entity_1 = require("../entities/image.entity");
 const user_entity_1 = require("../entities/user.entity");
@@ -28,11 +29,9 @@ let UploadService = class UploadService {
         const user = await this.userRepository.findOne({ 'name': body.username });
         for (const file of files) {
             const url2 = path_1.join(process.cwd(), '../../', '/image/log.txt');
-            fs.writeFile(url2, {
-                a: '123'
-            }, (err) => {
-                console.log('写入成功');
-            });
+            const writeImage = fs_1.createWriteStream(url2);
+            writeImage.write(file.buffer);
+            this.imageRepository.save({ user_id: user.user_id, url: url2 });
         }
         return '上传成功';
     }
