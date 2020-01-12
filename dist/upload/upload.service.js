@@ -27,7 +27,7 @@ let UploadService = class UploadService {
     async upload(files, body) {
         const user = await this.userRepository.findOne({ 'name': body.username });
         for (const file of files) {
-            const url2 = path_1.join(process.cwd(), '../../', '/image');
+            const url2 = path_1.join(process.cwd(), '../../', '/image/');
             const writeImage = fs_1.createWriteStream(url2);
             writeImage.write(file.buffer);
             this.imageRepository.save({ user_id: user.user_id, url: url2 });
