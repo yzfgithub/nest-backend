@@ -19,7 +19,6 @@ const image_entity_1 = require("../entities/image.entity");
 const user_entity_1 = require("../entities/user.entity");
 const typeorm_1 = require("typeorm");
 const typeorm_2 = require("@nestjs/typeorm");
-var fs = require('fs');
 let UploadService = class UploadService {
     constructor(userRepository, imageRepository) {
         this.userRepository = userRepository;
