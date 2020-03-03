@@ -1,8 +1,8 @@
 import { NewsService } from './news.service';
-import { News } from 'src/entities/news.entity';
+import { Article } from 'src/entities/article.entity';
 export declare class NewsController {
     private readonly NewsService;
     constructor(NewsService: NewsService);
-    create(body: News): Promise<News>;
+    create(body: Article): Promise<Article>;
     remove(param: any): Promise<any>;
 }

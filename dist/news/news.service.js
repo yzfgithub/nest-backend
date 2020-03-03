@@ -13,7 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const News_entity_1 = require("../entities/News.entity");
+const article_entity_1 = require("../entities/article.entity");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 let NewsService = class NewsService {
@@ -29,7 +29,7 @@ let NewsService = class NewsService {
 };
 NewsService = __decorate([
     common_1.Injectable(),
-    __param(0, typeorm_1.InjectRepository(News_entity_1.News)),
+    __param(0, typeorm_1.InjectRepository(article_entity_1.Article)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
 ], NewsService);
 exports.NewsService = NewsService;

@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
-import { News } from 'src/entities/News.entity';
+import { Article } from 'src/entities/article.entity';
 import { InjectRepository } from '@nestjs/typeorm'
 import { Repository } from 'typeorm';
 
 @Injectable()
 export class NewsService {
-    constructor(@InjectRepository(News) private readonly newsRepository:Repository<News>){}
+    constructor(@InjectRepository(Article) private readonly newsRepository:Repository<Article>){}
     
-    async create(body): Promise<News>{
+    async create(body): Promise<Article>{
         return this.newsRepository.save(body);
     }
     async remove(news_id:string): Promise<any>{

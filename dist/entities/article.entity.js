@@ -10,30 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-let News = class News {
+let Article = class Article {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
-], News.prototype, "id", void 0);
+], Article.prototype, "id", void 0);
 __decorate([
     typeorm_1.PrimaryGeneratedColumn('uuid'),
     __metadata("design:type", String)
-], News.prototype, "news_id", void 0);
+], Article.prototype, "news_id", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
-], News.prototype, "title", void 0);
+], Article.prototype, "title", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
-], News.prototype, "describution", void 0);
+], Article.prototype, "describution", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Number)
-], News.prototype, "grade", void 0);
-News = __decorate([
+], Article.prototype, "grade", void 0);
+Article = __decorate([
     typeorm_1.Entity()
-], News);
-exports.News = News;
-//# sourceMappingURL=News.entity.js.map
+], Article);
+exports.Article = Article;
+//# sourceMappingURL=article.entity.js.map

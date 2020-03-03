@@ -2265,20 +2265,20 @@
         "version": "6eea01702aa6619bdb64e1e52671c22ab219ad73fef93be85e421b69337bf0ea",
         "signature": "b5e94c01a086c2c0bdc1098fa2e4b7b1003a2cd5116062d4ed00cd2a8fbd84fb"
       },
-      "../src/entities/news.entity.ts": {
-        "version": "5223debe501bc9fb5f5d07b745769fb990b682a256c4ebef31558793ea74161e",
-        "signature": "7e76659029975ba125bdf66ca57a1f22baf87da2572d1dc494963777b1368600"
+      "../src/entities/article.entity.ts": {
+        "version": "7f0a9f2e3187efc8714ee62abf4becd496bba515b19d8e3108de8bbd34629e45",
+        "signature": "ef4411422b7d4aff98e98484406f485dd84176e957215335336dca380ea0a577"
       },
       "../src/news/news.service.ts": {
-        "version": "f932c1b92a179dbf05b14228a09c68f078789ff5ae45eb85f5d8472484f4152b",
-        "signature": "b0919a9c4e395785ec16f108648b4496fdedc7e076603a2c4b2744963b5c3414"
+        "version": "f2eba4eb88d69841746a8c1ec26d4b497cc70a3dd69593ca03f7f0c6592c606a",
+        "signature": "d9fbc3c67686a7fae8703a144440cd3b180366a6ba69459059a9a54909c2b634"
       },
       "../src/news/news.controller.ts": {
-        "version": "9c436f411d6431bddd7e6549c00d02d661e018eb6edaacf26b04d6e8d3cc2016",
-        "signature": "0a0a52029384898b0f531fa60bfb87735cdbc2c5ee5a47e57f0ae2b20df05365"
+        "version": "bcf748ecbf130c6caae0a7818943ae6067a8a440f7feee4571a7baf4894857cf",
+        "signature": "651291989a26e37a12c2f6f7a87d147dfa03916dc74d99f09ecfbe01fd17d14b"
       },
       "../src/news/news.module.ts": {
-        "version": "acaa5176d104fa87ab48c5a21e3ca93826a9d9a9af0443bde8970e844fbe71fd",
+        "version": "000a4941108a259e42a80587d779907b4238acaa21d4446e57eb25a36229b064",
         "signature": "c2e1c36ea0b9a84c44c052c92127dd00f0437b69ec2313a4e5296e0ad9457fda"
       },
       "../src/app.module.ts": {
@@ -7456,7 +7456,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/entities/news.entity.ts": [
+      "../src/entities/article.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -7465,7 +7465,7 @@
       ],
       "../src/news/news.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/entities/news.entity.ts",
+        "../src/entities/article.entity.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -7476,7 +7476,7 @@
       "../src/news/news.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/news/news.service.ts",
-        "../src/entities/news.entity.ts",
+        "../src/entities/article.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7487,7 +7487,7 @@
         "../src/news/news.service.ts",
         "../src/news/news.controller.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/entities/news.entity.ts",
+        "../src/entities/article.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8903,10 +8903,10 @@
       ],
       "../src/news/news.controller.ts": [
         "../src/news/news.service.ts",
-        "../src/entities/news.entity.ts"
+        "../src/entities/article.entity.ts"
       ],
       "../src/news/news.service.ts": [
-        "../src/entities/news.entity.ts",
+        "../src/entities/article.entity.ts",
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/upload/upload.controller.ts": [

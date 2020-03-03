@@ -1,4 +1,4 @@
-export declare class News {
+export declare class Article {
     id: number;
     news_id: string;
     title: string;
