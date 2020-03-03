@@ -13,10 +13,6 @@ const typeorm_1 = require("typeorm");
 let Article = class Article {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
-], Article.prototype, "id", void 0);
-__decorate([
     typeorm_1.PrimaryGeneratedColumn('uuid'),
     __metadata("design:type", String)
 ], Article.prototype, "news_id", void 0);

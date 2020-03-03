@@ -20,8 +20,8 @@ export class UserService {
         return this.userRepository.find(query);
     }
 
-    async findOne(id): Promise<any> {
-        return await this.userRepository.findOne({'id':id}, {relations: ['roles']})
+    async findOne(user_id): Promise<any> {
+        return await this.userRepository.findOne({'user_id':user_id}, {relations: ['roles']})
         // return this.userRepository.createQueryBuilder('')
         // return this.userRepository.findOne({'id':id});
         // return this.userRepository.findOne(id,{
@@ -33,9 +33,10 @@ export class UserService {
         let arr = [];
         if (user.roles.length) {
             arr = user.roles.map((item) =>  {
-                return {id: item}
+                return {role_id: item}
             })
         }
+        console.log(arr)
         user.roles =  await this.roleService.getRolesByIds(arr);
         return this.userRepository.save(user)
     }
@@ -55,7 +56,7 @@ export class UserService {
             let arr = [];
             if (param.roles.length) {
                 arr = param.roles.map((item) =>  {
-                    return {id: item}
+                    return {role_id: item}
                 })
             }
             result.roles =  await this.roleService.getRolesByIds(arr);

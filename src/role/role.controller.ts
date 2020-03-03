@@ -19,8 +19,8 @@ export class RoleController {
     update(@Body() body:Role): Promise<Role> {
         return this.roleService.update(body);
     }
-    @Delete(':id')
+    @Delete(':role_id')
     delete(@Param() param): Promise<string> {
-        return this.roleService.delete(param.id);
+        return this.roleService.delete(param.role_id);
     }
 }

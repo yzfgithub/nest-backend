@@ -6,6 +6,6 @@ export declare class RoleService {
     find(): Promise<Role[]>;
     create(role: Role): Promise<Role>;
     update(role: Role): Promise<any>;
-    delete(id: any): Promise<any>;
-    getRolesByIds(ids: any): Promise<Role[]>;
+    delete(role_id: any): Promise<any>;
+    getRolesByIds(roleIds: any): Promise<Role[]>;
 }

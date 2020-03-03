@@ -28,16 +28,17 @@ let UserService = class UserService {
     async find(query) {
         return this.userRepository.find(query);
     }
-    async findOne(id) {
-        return await this.userRepository.findOne({ 'id': id }, { relations: ['roles'] });
+    async findOne(user_id) {
+        return await this.userRepository.findOne({ 'user_id': user_id }, { relations: ['roles'] });
     }
     async create(user) {
         let arr = [];
         if (user.roles.length) {
             arr = user.roles.map((item) => {
-                return { id: item };
+                return { role_id: item };
             });
         }
+        console.log(arr);
         user.roles = await this.roleService.getRolesByIds(arr);
         return this.userRepository.save(user);
     }
@@ -56,7 +57,7 @@ let UserService = class UserService {
             let arr = [];
             if (param.roles.length) {
                 arr = param.roles.map((item) => {
-                    return { id: item };
+                    return { role_id: item };
                 });
             }
             result.roles = await this.roleService.getRolesByIds(arr);

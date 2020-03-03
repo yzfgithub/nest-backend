@@ -10,9 +10,9 @@ export class UserController {
     find(@Query() query): Promise<User []> {
         return this.userService.find(query);
     }
-    @Get(':id')
+    @Get(':user_id')
     findOne(@Param() param):Promise<any> {
-        return this.userService.findOne(param.id);
+        return this.userService.findOne(param.user_id);
     }
 
     @Post()

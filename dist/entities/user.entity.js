@@ -14,10 +14,6 @@ const role_entity_1 = require("./role.entity");
 let User = class User {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
-], User.prototype, "id", void 0);
-__decorate([
     typeorm_1.PrimaryGeneratedColumn('uuid'),
     __metadata("design:type", String)
 ], User.prototype, "user_id", void 0);

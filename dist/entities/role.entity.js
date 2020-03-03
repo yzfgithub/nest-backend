@@ -15,10 +15,6 @@ let Role = class Role {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
-], Role.prototype, "id", void 0);
-__decorate([
-    typeorm_1.Column('uuid'),
     __metadata("design:type", String)
 ], Role.prototype, "role_id", void 0);
 __decorate([

@@ -23,7 +23,7 @@ let UserController = class UserController {
         return this.userService.find(query);
     }
     findOne(param) {
-        return this.userService.findOne(param.id);
+        return this.userService.findOne(param.user_id);
     }
     create(body) {
         return this.userService.create(body);
@@ -46,7 +46,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "find", null);
 __decorate([
-    common_1.Get(':id'),
+    common_1.Get(':user_id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),

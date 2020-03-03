@@ -29,17 +29,18 @@ let RoleService = class RoleService {
         return this.roleRepository.save(role);
     }
     async update(role) {
-        let result = await this.roleRepository.findOne(role.id);
+        let result = await this.roleRepository.findOne(role.role_id);
         if (result) {
-            return this.roleRepository.update({ "id": role.id }, role);
+            return this.roleRepository.update({ "role_id": role.role_id
+            }, role);
         }
         else {
             return new api_exception_1.ApiException('角色id不存在', api_error_code_enmu_1.ApiErrorCode.ROLE_ID_INVALID, common_1.HttpStatus.BAD_REQUEST);
         }
     }
-    async delete(id) {
+    async delete(role_id) {
         let role = await this.roleRepository.findOne({
-            where: { "id": id }
+            where: { "role_id": role_id }
         });
         if (role) {
             return this.roleRepository.delete(role);
@@ -48,8 +49,8 @@ let RoleService = class RoleService {
             return new api_exception_1.ApiException('角色id不存在', api_error_code_enmu_1.ApiErrorCode.ROLE_ID_INVALID, common_1.HttpStatus.BAD_REQUEST);
         }
     }
-    async getRolesByIds(ids) {
-        return await this.roleRepository.findByIds(ids);
+    async getRolesByIds(roleIds) {
+        return await this.roleRepository.findByIds(roleIds);
     }
 };
 RoleService = __decorate([

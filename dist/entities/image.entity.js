@@ -13,10 +13,6 @@ const typeorm_1 = require("typeorm");
 let Image = class Image {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
-], Image.prototype, "id", void 0);
-__decorate([
     typeorm_1.PrimaryGeneratedColumn('uuid'),
     __metadata("design:type", String)
 ], Image.prototype, "image_id", void 0);

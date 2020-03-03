@@ -16,16 +16,17 @@ export class RoleService {
             return this.roleRepository.save(role)
         }
         async update(role:Role): Promise<any> {
-            let result = await this.roleRepository.findOne(role.id);
+            let result = await this.roleRepository.findOne(role.role_id);
             if (result) {
-                return this.roleRepository.update({"id": role.id}, role)
+                return this.roleRepository.update({"role_id": role.role_id
+            }, role)
             } else {
                 return new ApiException('角色id不存在', ApiErrorCode.ROLE_ID_INVALID, HttpStatus.BAD_REQUEST);
             }
         }
-        async delete(id): Promise<any> {
+        async delete(role_id): Promise<any> {
             let role = await this.roleRepository.findOne({
-                where: {"id":id}
+                where: {"role_id":role_id}
             })
             if (role) {
                 return this.roleRepository.delete(role);
@@ -43,8 +44,8 @@ export class RoleService {
         //     return await this.roleRepository.find({relations:["users"]})
         // }
         
-        async getRolesByIds(ids) {
-            return await this.roleRepository.findByIds(ids);
+        async getRolesByIds(roleIds) {
+            return await this.roleRepository.findByIds(roleIds);
         }
 
 }

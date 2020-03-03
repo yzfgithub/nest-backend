@@ -3,9 +3,6 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 @Entity()
 
 export class Article {
-    @PrimaryGeneratedColumn()
-    id: number
-
     @PrimaryGeneratedColumn('uuid')
     news_id: string
 

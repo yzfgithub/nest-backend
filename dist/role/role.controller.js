@@ -29,7 +29,7 @@ let RoleController = class RoleController {
         return this.roleService.update(body);
     }
     delete(param) {
-        return this.roleService.delete(param.id);
+        return this.roleService.delete(param.role_id);
     }
 };
 __decorate([
@@ -53,7 +53,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], RoleController.prototype, "update", null);
 __decorate([
-    common_1.Delete(':id'),
+    common_1.Delete(':role_id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
