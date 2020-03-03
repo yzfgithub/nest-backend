@@ -2274,7 +2274,7 @@
         "signature": "b0919a9c4e395785ec16f108648b4496fdedc7e076603a2c4b2744963b5c3414"
       },
       "../src/news/news.controller.ts": {
-        "version": "1a647229afddb2a8bbcf802153db3a72454272182a499da3381a0edc0ae97aa7",
+        "version": "9c436f411d6431bddd7e6549c00d02d661e018eb6edaacf26b04d6e8d3cc2016",
         "signature": "0a0a52029384898b0f531fa60bfb87735cdbc2c5ee5a47e57f0ae2b20df05365"
       },
       "../src/news/news.module.ts": {
