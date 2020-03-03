@@ -17,7 +17,7 @@
     "deploy":{
         "production" : {
             "user" : "root",
-            "host" : "111.229.246.48",
+            "host" : "122.51.106.251",
             "port": "22",
             "ref"  : "origin/master",
             "repo" : "git@github.com:yzfgithub/nest-backend.git",
