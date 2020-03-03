@@ -21,7 +21,7 @@
             "port": "22",
             "ref"  : "origin/master",
             "repo" : "git@github.com:yzfgithub/nest-backend.git",
-            "path" : "/data/backend/source",
+            "path" : "/data/backend",
             "post-deploy" : "pm2 startOrRestart ecosystem.json --env production",
             "ssh_options": "StrictHostKeyChecking=no",
             "env"  : {
