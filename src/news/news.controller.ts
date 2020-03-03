@@ -10,6 +10,7 @@ export class NewsController {
     create(@Body() body:News): Promise<News> {
         return this.NewsService.create(body);
     }
+    
     @Delete(":news_id")
     remove(@Param() param){
         return this.NewsService.remove(param.news_id);
