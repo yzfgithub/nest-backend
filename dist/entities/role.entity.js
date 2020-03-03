@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
+const user_entity_1 = require("./user.entity");
 let Role = class Role {
 };
 __decorate([
@@ -17,7 +18,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Role.prototype, "id", void 0);
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn('uuid'),
+    typeorm_1.Column('uuid'),
     __metadata("design:type", String)
 ], Role.prototype, "role_id", void 0);
 __decorate([
@@ -30,6 +31,10 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], Role.prototype, "desc", void 0);
+__decorate([
+    typeorm_1.ManyToMany(type => user_entity_1.User, user => user.roles),
+    __metadata("design:type", Array)
+], Role.prototype, "users", void 0);
 Role = __decorate([
     typeorm_1.Entity()
 ], Role);

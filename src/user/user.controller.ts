@@ -10,6 +10,10 @@ export class UserController {
     find(@Query() query): Promise<User []> {
         return this.userService.find(query);
     }
+    @Get(':id')
+    findOne(@Param() param):Promise<any> {
+        return this.userService.findOne(param.id);
+    }
 
     @Post()
     create(@Body() body): Promise<any> {

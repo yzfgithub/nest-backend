@@ -1,3 +1,4 @@
+import { Role } from "./role.entity";
 export declare class User {
     id: number;
     user_id: string;
@@ -8,5 +9,5 @@ export declare class User {
     gender: string;
     create_at: Date;
     update_at: Date;
-    role_ids: string;
+    roles: Role[];
 }

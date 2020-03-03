@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinTable, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinTable, OneToMany, RelationId, ManyToMany } from "typeorm";
 import { Role } from "./role.entity";
 
 @Entity()
@@ -31,9 +31,14 @@ export class User {
     })
     update_at: Date;
 
-    @Column()
-    role_ids: string;
+    // @ManyToOne(type => Role, role => role.users, {
+    //     onDelete:'NO ACTION',
+    // })
+    // role: Role;
 
-    // @OneToMany(type => Role, role => role.role_id, {cascade: ["insert", "update"]})
-    // role: Role
+    // @RelationId((user: User) => user.role)
+    // roleId: number;
+    @ManyToMany(type => Role, role => role.users)
+    @JoinTable()
+    roles: Role[]
 }

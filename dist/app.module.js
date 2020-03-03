@@ -13,6 +13,7 @@ const typeorm_1 = require("@nestjs/typeorm");
 const role_module_1 = require("./role/role.module");
 const user_module_1 = require("./user/user.module");
 const upload_module_1 = require("./upload/upload.module");
+const news_module_1 = require("./news/news.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -30,7 +31,8 @@ AppModule = __decorate([
             }),
             role_module_1.RoleModule,
             user_module_1.UserModule,
-            upload_module_1.UploadModule
+            upload_module_1.UploadModule,
+            news_module_1.NewsModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

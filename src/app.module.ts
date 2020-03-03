@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm'
 import { RoleModule } from './role/role.module';
 import { UserModule } from './user/user.module';
 import { UploadModule } from './upload/upload.module';
+import { NewsModule } from './news/news.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { UploadModule } from './upload/upload.module';
     }),
     RoleModule,
     UserModule,
-    UploadModule
+    UploadModule,
+    NewsModule
   ],
   controllers: [AppController],
   providers: [AppService],

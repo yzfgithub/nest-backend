@@ -12,9 +12,7 @@ export class RoleService {
         async find(): Promise<Role []>{
             return this.roleRepository.find();
         }
-
         async create(role:Role): Promise<Role> {
-            console.log(role);
             return this.roleRepository.save(role)
         }
         async update(role:Role): Promise<any> {
@@ -36,4 +34,17 @@ export class RoleService {
             }
             
         }
+
+        // async getRoleById(id): Promise<Role> {
+        //     return this.roleRepository.findOne({'id':id});
+        // }
+
+        // async getRoles() {
+        //     return await this.roleRepository.find({relations:["users"]})
+        // }
+        
+        async getRolesByIds(ids) {
+            return await this.roleRepository.findByIds(ids);
+        }
+
 }

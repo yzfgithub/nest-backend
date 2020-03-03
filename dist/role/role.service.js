@@ -26,7 +26,6 @@ let RoleService = class RoleService {
         return this.roleRepository.find();
     }
     async create(role) {
-        console.log(role);
         return this.roleRepository.save(role);
     }
     async update(role) {
@@ -48,6 +47,9 @@ let RoleService = class RoleService {
         else {
             return new api_exception_1.ApiException('角色id不存在', api_error_code_enmu_1.ApiErrorCode.ROLE_ID_INVALID, common_1.HttpStatus.BAD_REQUEST);
         }
+    }
+    async getRolesByIds(ids) {
+        return await this.roleRepository.findByIds(ids);
     }
 };
 RoleService = __decorate([

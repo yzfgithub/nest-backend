@@ -6,10 +6,11 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import {join} from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  // app.useStaticAssets(join(__dirname,'../public', 'upload'),{
-  //   prefix:'/static/'
-  // })
+  // const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  app.useStaticAssets(join(__dirname,'../public', 'upload'),{
+    prefix:'/static/'
+  })
   app.setGlobalPrefix('backend');
   app.useGlobalFilters(new HttpExceptionFilter());
 
@@ -22,7 +23,8 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api-docs', app, document);
-
+  
+  app.enableCors();
   await app.listen(3000);
 }
 bootstrap();

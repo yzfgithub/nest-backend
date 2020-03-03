@@ -18,14 +18,27 @@ const user_entity_1 = require("../entities/user.entity");
 const typeorm_2 = require("typeorm");
 const api_exception_1 = require("../common/exceptions/api.exception");
 const api_error_code_enmu_1 = require("../common/enums/api-error-code.enmu");
+const role_service_1 = require("../role/role.service");
+const role_entity_1 = require("../entities/role.entity");
 let UserService = class UserService {
-    constructor(userRepository) {
+    constructor(userRepository, roleService) {
         this.userRepository = userRepository;
+        this.roleService = roleService;
     }
     async find(query) {
         return this.userRepository.find(query);
     }
+    async findOne(id) {
+        return await this.userRepository.findOne({ 'id': id }, { relations: ['roles'] });
+    }
     async create(user) {
+        let arr = [];
+        if (user.roles.length) {
+            arr = user.roles.map((item) => {
+                return { id: item };
+            });
+        }
+        user.roles = await this.roleService.getRolesByIds(arr);
         return this.userRepository.save(user);
     }
     async update(user) {
@@ -40,7 +53,13 @@ let UserService = class UserService {
     async bind(param) {
         let result = await this.userRepository.findOne({ "user_id": param.user_id });
         if (result) {
-            result.role_ids = param.role_ids;
+            let arr = [];
+            if (param.roles.length) {
+                arr = param.roles.map((item) => {
+                    return { id: item };
+                });
+            }
+            result.roles = await this.roleService.getRolesByIds(arr);
             return this.userRepository.save(result);
         }
         else {
@@ -54,7 +73,8 @@ let UserService = class UserService {
 UserService = __decorate([
     common_1.Injectable(),
     __param(0, typeorm_1.InjectRepository(user_entity_1.User)),
-    __metadata("design:paramtypes", [typeorm_2.Repository])
+    __metadata("design:paramtypes", [typeorm_2.Repository,
+        role_service_1.RoleService])
 ], UserService);
 exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map

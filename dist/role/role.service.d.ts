@@ -7,4 +7,5 @@ export declare class RoleService {
     create(role: Role): Promise<Role>;
     update(role: Role): Promise<any>;
     delete(id: any): Promise<any>;
+    getRolesByIds(ids: any): Promise<Role[]>;
 }
