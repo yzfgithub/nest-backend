@@ -20,6 +20,9 @@ let NewsService = class NewsService {
     constructor(newsRepository) {
         this.newsRepository = newsRepository;
     }
+    async find() {
+        return this.newsRepository.find();
+    }
     async create(body) {
         return this.newsRepository.save(body);
     }

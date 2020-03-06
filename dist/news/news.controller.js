@@ -19,6 +19,9 @@ let NewsController = class NewsController {
     constructor(NewsService) {
         this.NewsService = NewsService;
     }
+    find() {
+        return this.NewsService.find();
+    }
     create(body) {
         return this.NewsService.create(body);
     }
@@ -26,6 +29,12 @@ let NewsController = class NewsController {
         return this.NewsService.remove(param.news_id);
     }
 };
+__decorate([
+    common_1.Get('/getList'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], NewsController.prototype, "find", null);
 __decorate([
     common_1.Post(),
     __param(0, common_1.Body()),
