@@ -26,6 +26,10 @@ __decorate([
 ], Article.prototype, "describution", void 0);
 __decorate([
     typeorm_1.Column(),
+    __metadata("design:type", String)
+], Article.prototype, "link", void 0);
+__decorate([
+    typeorm_1.Column(),
     __metadata("design:type", Number)
 ], Article.prototype, "grade", void 0);
 Article = __decorate([

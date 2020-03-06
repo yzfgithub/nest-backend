@@ -2266,8 +2266,8 @@
         "signature": "b5e94c01a086c2c0bdc1098fa2e4b7b1003a2cd5116062d4ed00cd2a8fbd84fb"
       },
       "../src/entities/article.entity.ts": {
-        "version": "afcb390583dd32f87ece4740b896ab0c2e9605eb979b13ddfb873fa5ed9d7566",
-        "signature": "3cf8ac5133daceb3d30b51156245870a5b96b429e8f8261671a1fd70da0b62ac"
+        "version": "87226808b6eb60d2e76be885c46b435098d50023c346b3d7b169c3b80cce8385",
+        "signature": "cf985e5c1890842a5375f8f1b9e82fa9eca8e4645a571b95a6f152f309c6845d"
       },
       "../src/news/news.service.ts": {
         "version": "f2eba4eb88d69841746a8c1ec26d4b497cc70a3dd69593ca03f7f0c6592c606a",
