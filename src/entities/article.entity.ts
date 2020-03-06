@@ -13,5 +13,8 @@ export class Article {
     describution: string
 
     @Column()
+    link: string
+
+    @Column()
     grade: number
 }
