@@ -2270,7 +2270,7 @@
         "signature": "cf985e5c1890842a5375f8f1b9e82fa9eca8e4645a571b95a6f152f309c6845d"
       },
       "../src/news/news.service.ts": {
-        "version": "cf4bb297f9fd5b97cbed6f78974e378fb544e4661c38eda39e1c55efb21995f7",
+        "version": "537b89ba0112a96a6b67f2fd687056c6b3d1f029c1b99f91fdd649c05f0ef537",
         "signature": "f272df7b14680f5dcaaf625bae1d985a7f1830efb95626e215502e80409b2bdf"
       },
       "../src/news/news.controller.ts": {
