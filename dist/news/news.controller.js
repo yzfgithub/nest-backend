@@ -31,7 +31,7 @@ let NewsController = class NewsController {
 };
 __decorate([
     common_1.Get('/getList'),
-    __param(0, common_1.Param()),
+    __param(0, common_1.Query()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)

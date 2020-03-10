@@ -9,7 +9,7 @@ export class NewsService {
 
     async find(query): Promise<any> {
         let qb = this.newsRepository.createQueryBuilder('news');
-        let startNum = (+query.pageSize) * (+query.pageNum - 1)
+        let startNum = (+query.pageSize) * (+query.pageNum - 1);
         qb = qb.skip(startNum).take(+query.pageSize);
         let result = await qb.getManyAndCount();
         let obj = {data:result[0],total: result[1]}

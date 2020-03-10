@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Delete, Param, Get } from '@nestjs/common';
+import { Controller, Post, Body, Delete, Param, Get, Query } from '@nestjs/common';
 import { NewsService } from './news.service';
 import { Article } from 'src/entities/article.entity';
 
@@ -7,7 +7,7 @@ export class NewsController {
     constructor(private readonly NewsService:NewsService){}
 
     @Get('/getList')
-    find(@Param() query): Promise<any> {
+    find(@Query() query): Promise<any> {
         return this.NewsService.find(query);
     }
 
