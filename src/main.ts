@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter'
+import { TransformInterceptor } from './interceptors/transform.interceptor'
 import { NestExpressApplication } from '@nestjs/platform-express';
 import {join} from 'path';
 
@@ -13,7 +14,7 @@ async function bootstrap() {
   })
   app.setGlobalPrefix('backend');
   app.useGlobalFilters(new HttpExceptionFilter());
-
+  app.useGlobalInterceptors(new TransformInterceptor())
 
   const options = new DocumentBuilder()
     .setTitle('测试swagger')

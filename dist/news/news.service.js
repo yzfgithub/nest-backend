@@ -20,8 +20,12 @@ let NewsService = class NewsService {
     constructor(newsRepository) {
         this.newsRepository = newsRepository;
     }
-    async find() {
-        return this.newsRepository.find();
+    async find(query) {
+        let qb = this.newsRepository.createQueryBuilder('news');
+        qb = qb.skip(query.pageSize * (query.pageNum - 1)).take(query.pageSize);
+        let result = await qb.getManyAndCount();
+        let obj = { data: result[0], total: result[1] };
+        return obj;
     }
     async create(body) {
         return this.newsRepository.save(body);

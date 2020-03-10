@@ -7,8 +7,13 @@ import { Repository } from 'typeorm';
 export class NewsService {
     constructor(@InjectRepository(Article) private readonly newsRepository:Repository<Article>){}
 
-    async find(): Promise<Article []> {
-        return this.newsRepository.find();
+    async find(query): Promise<any> {
+        let qb = this.newsRepository.createQueryBuilder('news');
+        qb = qb.skip(query.pageSize * (query.pageNum - 1)).take(query.pageSize);
+        let result = await qb.getManyAndCount();
+        let obj = {data:result[0],total: result[1]}
+        return obj;
+        // return this.newsRepository.find();
     }
     
     async create(body): Promise<Article>{

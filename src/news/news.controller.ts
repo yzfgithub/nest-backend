@@ -7,8 +7,8 @@ export class NewsController {
     constructor(private readonly NewsService:NewsService){}
 
     @Get('/getList')
-    find(): Promise<Article[]> {
-        return this.NewsService.find();
+    find(@Param() query): Promise<any> {
+        return this.NewsService.find(query);
     }
 
     @Post()
