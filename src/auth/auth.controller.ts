@@ -4,7 +4,7 @@ import { AuthService } from './auth.service';
 export class AuthController {
     constructor(private readonly authService: AuthService){}
     @Post('getToken')
-    getTokenByUserId(@Body('name') name: string,@Body('password') password: string){
-        return this.authService.createToken(name,password);
+    getTokenByUserId(@Body('phone') phone: string,@Body('password') password: string){
+        return this.authService.createToken(phone,password);
     }
 }
