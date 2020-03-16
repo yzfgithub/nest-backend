@@ -69,4 +69,8 @@ export class UserService {
     async remove(user_id:string): Promise<any> {
         return this.userRepository.delete({"user_id":user_id})
     }
+
+    async getUserByToken(token): Promise<any> {
+        return  this.userRepository.find(token);
+    }
 }

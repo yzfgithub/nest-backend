@@ -9,4 +9,5 @@ export declare class User {
     create_at: Date;
     update_at: Date;
     roles: Role[];
+    token: string;
 }

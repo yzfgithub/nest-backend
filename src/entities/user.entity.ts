@@ -39,4 +39,6 @@ export class User {
     @ManyToMany(type => Role, role => role.users)
     @JoinTable()
     roles: Role[]
+
+    token: string
 }

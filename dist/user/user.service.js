@@ -70,6 +70,9 @@ let UserService = class UserService {
     async remove(user_id) {
         return this.userRepository.delete({ "user_id": user_id });
     }
+    async getUserByToken(token) {
+        return this.userRepository.find(token);
+    }
 };
 UserService = __decorate([
     common_1.Injectable(),

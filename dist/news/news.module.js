@@ -11,11 +11,15 @@ const news_service_1 = require("./news.service");
 const news_controller_1 = require("./news.controller");
 const typeorm_1 = require("@nestjs/typeorm");
 const article_entity_1 = require("../entities/article.entity");
+const passport_1 = require("@nestjs/passport");
 let NewsModule = class NewsModule {
 };
 NewsModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forFeature([article_entity_1.Article])],
+        imports: [
+            typeorm_1.TypeOrmModule.forFeature([article_entity_1.Article]),
+            passport_1.PassportModule.register({ defaultStrategy: 'jwt' }),
+        ],
         providers: [news_service_1.NewsService],
         controllers: [news_controller_1.NewsController]
     })

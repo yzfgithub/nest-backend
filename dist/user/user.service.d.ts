@@ -11,4 +11,5 @@ export declare class UserService {
     update(user: User): Promise<any>;
     bind(param: any): Promise<any>;
     remove(user_id: string): Promise<any>;
+    getUserByToken(token: any): Promise<any>;
 }

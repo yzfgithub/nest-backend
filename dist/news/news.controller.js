@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const news_service_1 = require("./news.service");
 const article_entity_1 = require("../entities/article.entity");
+const passport_1 = require("@nestjs/passport");
 let NewsController = class NewsController {
     constructor(NewsService) {
         this.NewsService = NewsService;
@@ -30,6 +31,7 @@ let NewsController = class NewsController {
     }
 };
 __decorate([
+    common_1.UseGuards(passport_1.AuthGuard()),
     common_1.Get('/getList'),
     __param(0, common_1.Query()),
     __metadata("design:type", Function),
