@@ -9,9 +9,9 @@ export class AuthService {
         private readonly userService: UserService,
         private readonly jwtService: JwtService,
         ) {}
-    async createToken(name: string,password: string) {
+    async createToken(phone: string,password: string) {
         console.log('gg')
-        let result =await this.userService.find({"name":name,"password":password});
+        let result =await this.userService.find({"phone":phone,"password":password});
         console.log(result,'result');
         if(result){
             const expiration = 60*60;
