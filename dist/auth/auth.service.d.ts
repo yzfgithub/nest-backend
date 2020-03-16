@@ -6,7 +6,7 @@ export declare class AuthService {
     private readonly jwtService;
     constructor(userService: UserService, jwtService: JwtService);
     createToken(phone: string, password: string): Promise<ApiException | {
-        ret: import("../entities/user.entity").User;
+        token: string;
     }>;
     validateUser(payload: any): Promise<any>;
 }

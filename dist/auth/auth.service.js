@@ -26,12 +26,9 @@ let AuthService = class AuthService {
         if (result) {
             const expiration = 60 * 60;
             const data = { name: result[0].name, user_id: result[0].user_id };
-            const accessToken = this.jwtService.sign(data);
-            console.log(accessToken);
-            const ret = result[0];
-            ret.token = accessToken;
+            const token = this.jwtService.sign(data);
             return {
-                ret
+                token
             };
         }
         else {
