@@ -2386,8 +2386,8 @@
         "signature": "1d3e5f270f39a916ab42d8657547dee99f2869e1eaf9439d96e81f487654310a"
       },
       "../src/auth/auth.controller.ts": {
-        "version": "c372e5569fa63597f0ad678f3c8da148888a83e4ea299bb3f55ec7cd2a41ac39",
-        "signature": "fa1d889b61094fff09201bd6afcc9cf69a18c40ffb0a1771f43b3988450b86c3"
+        "version": "2584f92e27e58269bdf852dafc58a3ed1a5577020cfc6276bcde97f2b75356ec",
+        "signature": "912759c34445d32b6d896a812ad27be43ff8fbf244ccd7602832472607c1a370"
       },
       "../src/auth/jwt.strategy.ts": {
         "version": "50c3d55fb18e72e33857cce25f58e75fcc3cd85a19160b86110153ec2514090e",

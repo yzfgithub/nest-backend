@@ -18,13 +18,13 @@ let AuthController = class AuthController {
     constructor(authService) {
         this.authService = authService;
     }
-    getTokenByUserId(name, password) {
-        return this.authService.createToken(name, password);
+    getTokenByUserId(phone, password) {
+        return this.authService.createToken(phone, password);
     }
 };
 __decorate([
     common_1.Post('getToken'),
-    __param(0, common_1.Body('name')), __param(1, common_1.Body('password')),
+    __param(0, common_1.Body('phone')), __param(1, common_1.Body('password')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", void 0)
